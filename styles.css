@@ -1,0 +1,79 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-brainly: var(--brainly);
+  --color-brainly-bg: var(--brainly-bg);
+  --color-brainly-border: var(--brainly-border);
+  --color-fc: var(--fc);
+  --color-fc-bg: var(--fc-bg);
+  --color-fc-border: var(--fc-border);
+  --color-rs: var(--rs);
+  --color-rs-bg: var(--rs-bg);
+  --color-rs-border: var(--rs-border);
+  --color-km: var(--km);
+  --color-km-bg: var(--km-bg);
+  --color-km-border: var(--km-border);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-miss: var(--miss);
+  --color-miss-bg: var(--miss-bg);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.96 0.005 90);
+  --foreground: oklch(0.18 0.005 60);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.975 0.004 90);
+  --text-muted: oklch(0.5 0.005 60);
+  --text-subtle: oklch(0.68 0.005 60);
+  --border: oklch(0.18 0.005 60 / 0.1);
+  --border-strong: oklch(0.18 0.005 60 / 0.2);
+
+  --brainly: oklch(0.35 0.12 250);
+  --brainly-bg: oklch(0.94 0.04 250);
+  --brainly-border: oklch(0.5 0.13 250);
+
+  --fc: oklch(0.38 0.13 135);
+  --fc-bg: oklch(0.93 0.06 135);
+  --fc-border: oklch(0.5 0.14 135);
+
+  --rs: oklch(0.35 0.12 250);
+  --rs-bg: oklch(0.94 0.04 250);
+  --rs-border: oklch(0.5 0.13 250);
+
+  --km: oklch(0.4 0.12 290);
+  --km-bg: oklch(0.94 0.04 290);
+  --km-border: oklch(0.5 0.13 290);
+
+  --warn: oklch(0.4 0.12 60);
+  --warn-bg: oklch(0.94 0.05 70);
+  --miss: oklch(0.4 0.15 25);
+  --miss-bg: oklch(0.94 0.05 25);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
